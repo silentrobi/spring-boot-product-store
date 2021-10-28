@@ -5,6 +5,8 @@ import java.util.List;
 import javax.persistence.*;
 
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 @Entity
 @Table(name = "branch")
@@ -17,6 +19,9 @@ public class Branch {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @Column(name="tel_no")
+    private String telNo;
 
     @Column(name = "location")
     private String location;
